@@ -1,0 +1,17 @@
+{% extends "jobs/base.html" %}
+{% block content %}
+    <h2>NUMBER OF JOBS: {{size}}</h2>
+    {% for s in hublijobs %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <p> JOb NAME: {{s.Job_role}} </p>
+              <p> LOCATION: {{s.location}} </p>
+              <p> SALARY: {{s.salary}} </p>
+              <p> DATE: {{s.date}} </p>
+              <p> LOCATION: {{s.specialization}} </p>
+              <p> SPECIFICATION: {{s.specification}} </p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
